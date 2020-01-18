@@ -17306,6 +17306,8 @@ in
 
   cherry = callPackage ../data/fonts/cherry { inherit (xorg) fonttosfnt mkfontdir; };
 
+  chromeos-gtk-theme= callPackage ../data/themes/chromeos { };
+
   cldr-emoji-annotation = callPackage ../data/misc/cldr-emoji-annotation { };
 
   clearlooks-phenix = callPackage ../data/themes/clearlooks-phenix { };
