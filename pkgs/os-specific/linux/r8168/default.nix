@@ -14,10 +14,10 @@ in stdenv.mkDerivation rec {
   # I've verified manually (`diff -r`) that the source code for version 8.046.00
   # is the same as the one available on the realtek website.
   src = fetchFromGitHub {
-    owner = "mtorromeo";
+    owner = "zu1k";
     repo = "r8168";
-    rev = version;
-    sha256 = "16mpr0np6xbmzdnwg4p3q6yli2gh032k98g4vplya33hrn50vh52";
+    rev = "39dd0fd2e5dc45cd63113f33a9890e36c304916d";
+    sha256 = "sha256-9XTzbL5PJbVAlM1ZWOqquCDvRXiQgByPvLUfQpWfJqE=";
   };
 
   hardeningDisable = [ "pic" ];
