@@ -6,7 +6,7 @@ let modDestDir = "$out/lib/modules/${kernel.modDirVersion}/kernel/drivers/net/wi
 in stdenv.mkDerivation rec {
   name = "r8168-${kernel.version}-${version}";
   # on update please verify that the source matches the realtek version
-  version = "8.048.03";
+  version = "8.051.02";
 
   # This is a mirror. The original website[1] doesn't allow non-interactive
   # downloads, instead emailing you a download link.
@@ -17,7 +17,7 @@ in stdenv.mkDerivation rec {
     owner = "mtorromeo";
     repo = "r8168";
     rev = version;
-    sha256 = "1l8llpcnapcaafxp7wlyny2ywh7k6q5zygwwjl9h0l6p04cghss4";
+    sha256 = "16mpr0np6xbmzdnwg4p3q6yli2gh032k98g4vplya33hrn50vh52";
   };
 
   hardeningDisable = [ "pic" ];
@@ -54,6 +54,5 @@ in stdenv.mkDerivation rec {
     license = licenses.gpl2Plus;
     platforms = platforms.linux;
     maintainers = with maintainers; [ timokau ];
-    broken = (lib.versions.majorMinor kernel.modDirVersion) != "5.15";
   };
 }
