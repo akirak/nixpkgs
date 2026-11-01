@@ -168,6 +168,9 @@ let
           (add-to-list 'treesit-extra-load-path "$out/lib/")
         ''}
 
+        ;; For string-join
+        (require 'subr-x)
+
         ;; Remove wrapper-added dir from PATH-like environment variable
         ;; so that the wrapper-added dir is not propagated to subprocesses.
         (let ((restore-path
